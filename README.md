@@ -41,3 +41,18 @@ APP="build/Markdown Viewer.app/Contents/MacOS/MarkdownViewer"
 | `FileWatcher.swift` | Watches the open file, including atomic saves |
 | `CommandLineExport.swift` | Headless `--export` mode |
 | `Support/` | Info.plist and icon generator |
+
+## Possible improvements
+
+- **Syntax highlighting** for fenced code blocks, for example by bundling highlight.js or using a Swift highlighter at render time.
+- **Find in page** (⌘F), using WebKit's find API with a native find bar.
+- **Page Setup** for paper size, orientation and margins. PDF export currently uses the system default paper size with 0.75" margins.
+- **Table of contents sidebar** built from the document's headings.
+- **Footnotes and math**: swift-markdown doesn't parse footnotes or `$…$` math, so these would need a renderer extension or something like KaTeX.
+- **Mermaid diagrams** in fenced `mermaid` blocks.
+- **Custom themes / CSS**, including a user stylesheet and a separate theme for printing.
+- **Signed and notarized release builds**, so the app opens on other Macs without a Gatekeeper warning.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
